@@ -16,7 +16,6 @@ public class Servlet extends HttpServlet{
 	
 		req.getRequestDispatcher("/index2.jsp").forward(req, resp);
 		
-		
 	}
 	
 	

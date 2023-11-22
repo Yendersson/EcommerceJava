@@ -75,7 +75,7 @@
               </button>
 
               <button class="action-btn select carrito" data-id="Carrito">
-                  <a href="#" style="color: black;"><ion-icon name="cart-outline"></ion-icon></a>
+                  <a href="<%=request.getContextPath()%>/kart.jsp" style="color: black;"><ion-icon name="cart-outline"></ion-icon></a>
                   <span class="count">0</span>
               </button>
 
@@ -168,7 +168,7 @@
           <ion-icon name="menu-outline"></ion-icon>
       </button>
 
-      <button class="action-btn carrito" data-id="Carrito">
+      <button class="action-btn carrito" onclick="window.location='<%=request.getContextPath()%>/kart.jsp'" data-id="Carrito">
           <ion-icon name="cart-outline" id="carrito"></ion-icon>
           <span class="count">0</span>
       </button>

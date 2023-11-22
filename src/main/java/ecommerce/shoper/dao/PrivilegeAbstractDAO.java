@@ -12,6 +12,7 @@ public abstract class PrivilegeAbstractDAO extends ControllerDAO implements DAO<
 		return em.find(Privilege.class, id);
 	}
 
+
 	@Override
 	public Privilege findById(String id) {
 		em = getEntityManager();
@@ -20,11 +21,13 @@ public abstract class PrivilegeAbstractDAO extends ControllerDAO implements DAO<
 		return em.find(Privilege.class, voobj);
 	}
 
+
 	@Override
 	public List<Privilege> findAll() {
 		em = getEntityManager();
 		return  em.createQuery("SELECT b FROM Privilege b").getResultList();
 	}
+
 
 	@Override
 	public void save(Privilege entity) {
@@ -38,6 +41,7 @@ public abstract class PrivilegeAbstractDAO extends ControllerDAO implements DAO<
 		
 		tx.commit();	
 	}
+
 
 	@Override
 	public void delete(Privilege entity) {

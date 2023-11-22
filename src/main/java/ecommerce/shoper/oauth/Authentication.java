@@ -14,6 +14,7 @@ import org.hibernate.internal.build.AllowSysOut;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import ecommerce.shoper.entities.User;
+import ecommerce.shoper.entities.UserAbstract;
 
 public class Authentication extends HttpServlet{
 	
@@ -27,7 +28,7 @@ public class Authentication extends HttpServlet{
 		
 		String bodyData = req.getReader().readLine();
 		User user = objMapper.readValue(bodyData, User.class);
-		User newUser = User.DAO.authUser(user);
+		User newUser = UserAbstract.DAO.authUser(user);
 		
 		HttpSession session = req.getSession();
 		

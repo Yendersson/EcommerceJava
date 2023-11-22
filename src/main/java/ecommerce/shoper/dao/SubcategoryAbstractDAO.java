@@ -27,6 +27,7 @@ public abstract class SubcategoryAbstractDAO extends ControllerDAO implements DA
 		return  em.createQuery("SELECT b FROM Subcategory b").getResultList();
 	}
 
+
 	@Override
 	public void save(Subcategory entity) {
 		em = getEntityManager();
@@ -39,6 +40,7 @@ public abstract class SubcategoryAbstractDAO extends ControllerDAO implements DA
 		
 		tx.commit();	
 	}
+
 
 	@Override
 	public void delete(Subcategory entity) {

@@ -19,21 +19,21 @@ document.querySelector('#close').addEventListener('click', (e)=>{
 
 })
 
-document.querySelector('#close-logueado').addEventListener('click', (e)=>{
+/*document.querySelector('#close-logueado').addEventListener('click', (e)=>{
     e.preventDefault();
     document.querySelector('.modal-logeado').classList.remove('modal-show');
 
-})
+})/*
 
 /*****************************************FORM FUNCTION********************************************** */
 
 const form = document.querySelector('#form');
 let btnLogin = document.querySelector('#btn-login');
-const formRegistro = document.querySelector('#form-register');
-const btnRegistro = document.querySelector('#register');
+//const formRegistro = document.querySelector('#form-register');
+//const btnRegistro = document.querySelector('#register');
 const btnIncio = document.querySelector('#login');
-formRegistro.style.display='none';
-btnIncio.style.display = 'none';
+//formRegistro.style.display='none';
+//btnIncio.style.display = 'none';
 
 btnLogin.addEventListener('click', (e)=>{
     e.preventDefault();
@@ -57,7 +57,7 @@ btnLogin.addEventListener('click', (e)=>{
             console.log(data.accessToken);
             document.cookie = `token=${data.accessToken}`;*/
             //console.log(data)
-            location.assign('/');
+            location.assign('./');
             // localStorage.setItem('user', data.usuario.name);
         }else{
             document.querySelector('#alerta').innerHTML = data.results.error
@@ -74,12 +74,12 @@ btnRegistro.addEventListener('click', ()=>{
 
 })
 
-btnIncio.addEventListener('click', ()=>{
+/*btnIncio.addEventListener('click', ()=>{
     form.style.display = 'block';
     formRegistro.style.display='none';
     btnIncio.style.display = 'none';
     btnRegistro.style.display = 'block';
-});
+});*/
 
 
 let btnRegister = document.querySelector('#btn-register');

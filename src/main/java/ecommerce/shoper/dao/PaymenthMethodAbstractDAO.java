@@ -3,7 +3,6 @@ package ecommerce.shoper.dao;
 import java.util.List;
 
 import ecommerce.shoper.entities.PaymentMethod;
-import ecommerce.shoper.entities.PaymentMethod;
 
 public class PaymenthMethodAbstractDAO  extends ControllerDAO implements DAO<PaymentMethod, Long>{
 	
@@ -20,6 +19,7 @@ public class PaymenthMethodAbstractDAO  extends ControllerDAO implements DAO<Pay
 		
 		return em.find(PaymentMethod.class, voobj);
 	}
+
 
 	@Override
 	public List<PaymentMethod> findAll() {

@@ -39,6 +39,7 @@ public abstract class ProductAbstractDAO extends ControllerDAO implements DAO<Pr
 		tx.commit();	
 	}
 
+	
 	@Override
 	public void delete(Product entity) {
 		em = getEntityManager();

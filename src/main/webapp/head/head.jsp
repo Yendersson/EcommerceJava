@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/productos.css">
     <link rel="stylesheet" href="./css/productos_detail.css">
+    <link rel="stylesheet" href="./css/kart.css">
     <%---
     <link rel="stylesheet" href="/css/acercaNosotros.css">
     <link rel="stylesheet" href="/css/faq.css">

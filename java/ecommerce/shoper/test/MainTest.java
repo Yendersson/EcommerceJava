@@ -1,7 +1,5 @@
 package ecommerce.shoper.test;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.Collection;
 import java.util.Date;
 import java.util.Random;
@@ -12,13 +10,16 @@ import ecommerce.shoper.dao.PurchaseDAO;
 import ecommerce.shoper.dao.RoleDAO;
 import ecommerce.shoper.dao.UserDAO;
 import ecommerce.shoper.entities.Brand;
+import ecommerce.shoper.entities.BrandAbstract;
 import ecommerce.shoper.entities.Campaign;
 import ecommerce.shoper.entities.PaymentMethod;
+import ecommerce.shoper.entities.PaymentMethodAbstract;
 import ecommerce.shoper.entities.Privilege;
 import ecommerce.shoper.entities.Product;
 import ecommerce.shoper.entities.Purchase;
 import ecommerce.shoper.entities.Role;
 import ecommerce.shoper.entities.Supplier;
+import ecommerce.shoper.entities.SupplierAbstract;
 import ecommerce.shoper.entities.User;
 
 public class MainTest {
@@ -29,9 +30,9 @@ public class MainTest {
 		PrivilegeDAO privDAO = new PrivilegeDAO();
 		PurchaseDAO purchDAO = new PurchaseDAO();
 		Purchase purchase = new Purchase();
-		Brand brand = Brand.DAO.findById(1L);
-		Supplier sp = Supplier.DAO.findById(1L);
-		PaymentMethod pm = PaymentMethod.DAO.findById(1L);
+		Brand brand = BrandAbstract.DAO.findById(1L);
+		Supplier sp = SupplierAbstract.DAO.findById(1L);
+		PaymentMethod pm = PaymentMethodAbstract.DAO.findById(1L);
 		Date fechaActual = new Date();
         SimpleDateFormat formato = new SimpleDateFormat("yyyy-MM-dd");
         String fechaFormateada = formato.format(fechaActual);

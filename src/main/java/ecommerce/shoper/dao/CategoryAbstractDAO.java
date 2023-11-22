@@ -10,7 +10,7 @@ public abstract class CategoryAbstractDAO extends ControllerDAO implements DAO<C
 		em = getEntityManager();
 		return em.find(Category.class, id);
 	}
-
+	
 	@Override
 	public Category findById(String id) {
 		em = getEntityManager();

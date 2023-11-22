@@ -3,7 +3,6 @@ package ecommerce.shoper.dao;
 import java.util.List;
 
 import ecommerce.shoper.entities.Blog;
-import ecommerce.shoper.entities.Blog;
 
 public abstract class BlogAbstractDAO extends ControllerDAO implements DAO<Blog, Long>{
 	

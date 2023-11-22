@@ -6,7 +6,9 @@ import java.util.Random;
 
 import ecommerce.shoper.dao.CategoryDAO;
 import ecommerce.shoper.entities.Category;
+import ecommerce.shoper.entities.CategoryAbstract;
 import ecommerce.shoper.entities.Product;
+import ecommerce.shoper.entities.ProductAbstract;
 import ecommerce.shoper.entities.Subcategory;
 
 public class InsertData {
@@ -16,9 +18,9 @@ public class InsertData {
         String fechaFormateada = formato.format(fechaActual);
         Random rand = new Random();
         
-        Category cat = Category.DAO.findById(3L);
+        Category cat = CategoryAbstract.DAO.findById(3L);
         
-        for(Product pr :Product.DAO.productForCategory(cat)) {
+        for(Product pr :ProductAbstract.DAO.productForCategory(cat)) {
         	System.out.println(pr.getTitle());
         	System.out.println(pr.getCategory().getTitle());
         	System.out.println();

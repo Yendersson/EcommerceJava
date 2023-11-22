@@ -39,6 +39,7 @@ public abstract class TypeAbstractDAO extends ControllerDAO implements DAO<Type,
 		tx.commit();	
 	}
 
+
 	@Override
 	public void delete(Type entity) {
 		em = getEntityManager();

@@ -8,7 +8,7 @@
 
 %>
     
-    <h1><%=user != null? user.getUsername() : ""%></h1>
+    <h1 style="text-align: center;"><%=user != null? user.getUsername() : ""%></h1>
  <div class="slideshow-container">
         
         <!-------------------- IMAGES  -------------------->

@@ -11,6 +11,7 @@ public abstract class RoleAbstractDAO extends ControllerDAO implements DAO<Role,
 		return em.find(Role.class, id);
 	}
 
+
 	@Override
 	public Role findById(String id) {
 		em = getEntityManager();
@@ -18,6 +19,7 @@ public abstract class RoleAbstractDAO extends ControllerDAO implements DAO<Role,
 		
 		return em.find(Role.class, voobj);
 	}
+
 
 	@Override
 	public List<Role> findAll() {
@@ -37,6 +39,7 @@ public abstract class RoleAbstractDAO extends ControllerDAO implements DAO<Role,
 		
 		tx.commit();	
 	}
+
 
 	@Override
 	public void delete(Role entity) {

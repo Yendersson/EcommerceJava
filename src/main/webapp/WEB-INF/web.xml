@@ -33,6 +33,56 @@
 		<servlet-name>authentication</servlet-name>
 		<url-pattern>/auth</url-pattern>
 	</servlet-mapping>
+	
+		<servlet>
+		<servlet-name>Logout</servlet-name>
+		<servlet-class>ecommerce.shoper.oauth.Logout</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>Logout</servlet-name>
+		<url-pattern>/logout</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>paymentmp</servlet-name>
+		<servlet-class>ecommerce.shoper.payment.PaymentMP</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>paymentmp</servlet-name>
+		<url-pattern>/paymentmp</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>payments</servlet-name>
+		<servlet-class>ecommerce.shoper.controller.PaymentMethod</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>payments</servlet-name>
+		<url-pattern>/payments</url-pattern>
+	</servlet-mapping>
+	
+	<filter>
+		<filter-name>filter</filter-name>
+		<filter-class>ecommerce.shoper.controller.Filters</filter-class>
+	</filter>
+	
+	<filter-mapping>
+		<filter-name>filter</filter-name>
+		<url-pattern>/payment.jsp</url-pattern>
+	</filter-mapping>
+	
+	<filter-mapping>
+		<filter-name>filter</filter-name>
+		<url-pattern>/kart.jsp</url-pattern>
+	</filter-mapping>
+	
+		<filter-mapping>
+		<filter-name>filter</filter-name>
+		<url-pattern>/payments/*</url-pattern>
+	</filter-mapping>
+         
          
 </web-app>
          

@@ -39,7 +39,7 @@
             </div>
           </div>
           <div class="agregarEnCarritoProducto">
-            <button class="agregaAlCarritoProducto" id="agregar">Agregar al carrito</button>
+            <button class="agregaAlCarritoProducto" id="agregar" onclick="addToKart(<%=p.getId()%>)"  data-id-product="<%=p.getId()%>">Agregar al carrito</button>
           </div>
         </div>
       </div>

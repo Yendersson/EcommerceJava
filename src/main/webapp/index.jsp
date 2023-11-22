@@ -6,7 +6,6 @@
 <html>
 	<jsp:include page="head/head.jsp"></jsp:include>
 <body>
-
 	<jsp:include page="header/header.jsp"></jsp:include>
 	
 	<jsp:include page="content/index.jsp"></jsp:include>

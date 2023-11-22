@@ -1,6 +1,9 @@
+ 
+ <%--if (request.getSession().getAttribute("user") != null) { --%>
    <section class="modal">
         <div class="modal-container modal-show">
           <img src="/images/img/protofinal (4).png" alt="">
+          <% if (request.getSession().getAttribute("user") == null) { %>
           <form action="" id="form">
             <div class="form-inicio">
               <label for="">Username:</label>
@@ -13,7 +16,7 @@
             </div>
           </form>
           <button class="btn-register" id="register">Registrate</button>
-
+		<%-- 
           <form id="form-register">
             <div class="form-inicio">
               <label for="">Nombre:</label>
@@ -29,17 +32,14 @@
             </div>
           </form>
           <button class="btn-register" id="login">Ya tienes cuenta?</button>
-
-          <a href="#" id="close">Cerrar</a>
+          --%>
+		<% } else { %>
+           	<button class="btn-login" id="btn-perfil">Ver perfil</button>
+            <button class="btn-register" id="cerrar-sesion"> <a href="<%=request.getContextPath() %>/logout">Cerrar sesion</a></button>
+          
+          <% } %>
+         	<a href="#" id="close">Cerrar</a>
         </div>
       </section>
-
-      <section class="modal-logeado">
-        <div class="modal-container modal-show">
-            <button class="btn-login" id="btn-perfil">Ver perfil</button>
-            <button class="btn-register" id="cerrar-sesion">Cerrar sesion</button>
-            <a href="#" id="close-logueado">Cerrar</a>
-
-
-        </div>
-      </section>
+<%-- } else { --%>
+<%--} --%>
